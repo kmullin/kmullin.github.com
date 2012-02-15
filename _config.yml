@@ -9,8 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : kmullin
-tagline: ops guy
+title : KPmullin
+tagline: of an ops guy
 author :
   name : Kevin Mullin
   email : kevin@kpmullin.com

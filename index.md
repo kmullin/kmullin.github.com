@@ -1,6 +1,6 @@
 ---
 layout: page
-title: From the Mouth
+title: From the Hip
 ---
 {% include JB/setup %}
 

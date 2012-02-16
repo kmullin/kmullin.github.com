@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : kpmullin
-tagline:
+tagline: of an ops guy
 author :
   name : Kevin Mullin
   email : kevin@kpmullin.com

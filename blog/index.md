@@ -11,5 +11,5 @@ title: /blog
   {% endfor %}
 </ul>
 {% else %}
-insert blog here
+nothing yet
 {% endif %}

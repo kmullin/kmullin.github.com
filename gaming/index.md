@@ -8,8 +8,9 @@ tagline: <br>
 #### games i play ####
 
 * [league of legends](http://leagueoflegends.com)
+* [tribes: ascend](http://tribesascend.com)
 * [team fortress 2](http://www.teamfortress.com)
-* [skyrim](http://www.elderscrolls.com/skyrim/)
+* [skyrim](http://www.elderscrolls.com/skyrim)
 * [minecraft](http://minecraft.net)
 
 #### gaming services ####

@@ -1,109 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> {{ site.author.name }} | {{ site.author.title }} | {{ site.author.email }} </title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ site.author.name }} - {{ site.author.title }} - {{ site.author.email }}</title>
 
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+  <meta name="description" content="Semantic, R">
+  <meta name="author" content="J. Pedro Ribeiro - jpedroribeiro.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
-    <link rel="stylesheet" type="text/css" href="/assets/local/css/resume.css" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="screen" href="/assets/local/css/styles.css">
+
+  <!-- Modernizr on top to enable old browsers to render HTML5 markup -->
+  <script src="/assets/local/js/modernizr.custom.15550.js"></script>
 
 </head>
+
 <body>
 
+    <header class="vcard">
+    	<h1 class="fn">{{ site.author.name }}</h1>
+        <h2 class="role">{{ site.author.title }}</h2>
+    	<ul class="contact">
+        	<li class="email">{{ site.author.email }}</li>
+            <li class="url github"><a href="https://www.github.com/{{ site.author.github }}" title="{{ site.author.name }} Github">Github</a></li>
+            <li class="url"><a href="{{ site.production_url }}" title="{{ site.author.name }} Website">{{ site.production_url }}</a></li>
+            <li class="adr"><span class="locality">{{ site.author.location }}</span></li>
+            <li class="url linkedin"><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" title="{{ site.author.name }} Linkedin">Linkedin</a></li>
+		</ul>
+    </header>
 
-<div id="doc2" class="yui-t7">
-    <div id="inner">
+	<section id="summary">
+    	<h1>Summary</h1>
+        <p>{{ page.profile }}</p>
+    </section>
 
-        <div id="hd">
-            <div class="yui-gc">
-                <div class="yui-u first">
-                    <h1>{{ site.author.name }}</h1>
-                    <h2>{{ site.author.title }}</h2>
-                </div>
+    <section id="skills">
+    	<h1>Skills</h1>
+        <dl>
+            {% for skill_hash in page.skills %}
+                {% for skill in skill_hash %}
+                    <dt>{{ skill[0] }}</dt>
+                    {% for s in skill[1] %}
+                    <dd>{{ s }}</dd>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </dl>
+    </section>
 
-                <div class="yui-u">
-                    <div class="contact-info">
-                        <h3><a id="pdf" href="https://dl.dropbox.com/u/3032974/Kevin.Mullin-Resume.pdf">Download PDF</a></h3>
-                        <h3><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></h3>
-                    </div><!--// .contact-info -->
-                </div>
-            </div><!--// .yui-gc -->
-        </div><!--// hd -->
+    <section id="experience">
+    	<h1>Work Experience</h1>
+        {% for job_hash in page.jobs %}
+            <article>
+                <h1>{{ job_hash.company }} <span>{{ job_hash.location }}</span></h1>
+                <h2>{{ job_hash.title }}</h2>
+                <span class="start">{{ job_hash.dates.start }}</span>
+                <span class="end">{{ job_hash.dates.end }}</span>
+                <p>{{ job_hash.description }}</p>
+                {% if job_hash.duties %}
+                    <p>
+                    {% for duty in job_hash.duties %}
+                        {{ duty }} <br/>
+                    {% endfor %}
+                    </p>
+                {% endif %}
+            </article>
+        {% endfor %}
 
-        <div id="bd">
-            <div id="yui-main">
-                <div class="yui-b">
+    </section>
 
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Profile</h2>
-                        </div>
-                        <div class="yui-u">
-                            <p class="enlarge">
-                                {{ page.profile }}
-                            </p>
-                        </div>
-                    </div><!--// .yui-gf -->
+ <!--   <section id="hobbies">
+    	<h1>Hobbies &amp; Interests</h1>
+        <ul>
+        	<li>Playing Drums and Percussion (Caj&oacute;n) with <a href="https://www.facebook.com/DiplomatasBrasil" rel="external" title="Diplomatas on Facebook">Diplomatas</a>, an acoustic trio;</li>
+            <li><a href="http://youtweetintome.jpedroribeiro.com/" rel="external" title="You Tweetin' to Me?">Tweeting moview reviews</a>;</li>
+            <li><a href="http://ribeirobrowbrewery.tumblr.com/" rel="external" title="Ribeiro Bros Brewery">Brewing beer</a> with my brother;</li>
+            <li><a href="http://www.flickr.com/photos/jpedroribeiro/4557978857/in/photostream/" rel="external" title="My Flickr Set">Photography</a>;</li>
+            <li>Travelling;</li>
+            <li>Gaming (from Atari to PS3).</li>
+        </ul>
+    </section> -->
 
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Skills</h2>
-                        </div>
-                        <div class="yui-u">
-                            {% for skill_hash in page.skills %}
-                                <div class="talent">
-                                    {% for skill in skill_hash %}
-                                    <h2>{{ skill[0] }}</h2>
-                                    <p>{{ skill[1] | join: ', ' }}</p>
-                                    {% endfor %}
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div><!--// .yui-gf -->
-
-                    <div class="yui-gf last">
-
-                        <div class="yui-u first">
-                            <h2>Experience</h2>
-                        </div><!--// .yui-u -->
-
-                        <div class="yui-u">
-
-                            {% for job_hash in page.jobs %}
-                            <div class="job{% if forloop.last %} last{% endif %}">
-                                <h2>{{ job_hash.company }}</h2>
-                                <h3>{{ job_hash.title }}</h3>
-                                <h4>{{ job_hash.dates.start }} - {{ job_hash.dates.end }}</h4>
-                                <p>{{ job_hash.description }}</p>
-                                {% if job_hash.duties %}
-                                    <ul>
-                                      {% for duty in job_hash.duties %}
-                                      <li {% if forloop.last %}class="last"{% endif %}>{{ duty }}</li>
-                                      {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </div>
-                            {% endfor %}
-
-                        </div><!--// .yui-u -->
-                    </div><!--// .yui-gf -->
-
-                </div><!--// .yui-b -->
-            </div><!--// yui-main -->
-        </div><!--// bd -->
-
-        <div id="ft">
-            <p>{{ site.author.name }} &mdash; <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
-        </div><!--// footer -->
-
-    </div><!-- // inner -->
-
-
-</div><!--// doc -->
+  <!-- Script for enabling media queries on IE5+ -->
+  <script src="/assets/local/js/css3-mediaqueries.js"></script>
 
 </body>
 </html>

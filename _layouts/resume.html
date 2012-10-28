@@ -54,10 +54,12 @@
                             <h2>Skills</h2>
                         </div>
                         <div class="yui-u">
-                            {% for skill in page.skills %}
+                            {% for skill_hash in page.skills %}
                                 <div class="talent">
+                                    {% for skill in skill_hash %}
                                     <h2>{{ skill[0] }}</h2>
-                                    <p>{{ skill[1] | join: ', '}}</p>
+                                    <p>{{ skill[1] | join: ', ' }}</p>
+                                    {% endfor %}
                                 </div>
                             {% endfor %}
                         </div>

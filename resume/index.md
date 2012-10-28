@@ -9,30 +9,30 @@ profile:
   and the ability to multitask while remaining detail-oriented.
 
 skills:
-  Programming:
+  - Programming:
     - Ruby
     - Python
     - C++
     - PHP
     - Perl
     - Java
-  Virtualization:
+  - Virtualization:
     - KVM (qemu)
     - Xen
     - VMWare (ESXi, Server)
-  Operating Systems:
+  - Operating Systems:
     - Linux
     - FreeBSD
     - Solaris
     - Mac OSX
     - Microsoft Windows
-  Linux Distributions:
+  - Linux Distributions:
     - Gentoo
     - Debian
     - RedHat (CentOS)
     - Arch
     - Slackware
-  Network Devices:
+  - Network Devices:
     - Cisco
     - Juniper
     - Force10
@@ -40,24 +40,24 @@ skills:
     - Internap FCP
     - Netscaler
     - NetApp
-  Software:
+  - Software:
     - OpenVPN
     - NIS
     - NFS
     - OpenLDAP (slapd)
     - DNS (Bind9, nsd)
-  Webservers:
+  - Webservers:
     - Nginx
     - Apache
     - Tomcat
-  Datastores:
+  - Datastores:
     - MySQL
     - Redis
     - Riak
     - MemcacheD
     - MongoDB
     - PostgreSQL
-  Monitoring:
+  - Monitoring:
     - Nagios
     - Ganglia
     - Cacti

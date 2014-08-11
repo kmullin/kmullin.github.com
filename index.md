@@ -10,6 +10,7 @@ i work with an awesome [team](http://uservoice.com/about/team) at [uservoice](ht
 
 ------------------------
 #### things i like: ####
+
 * building / scaling / maintaining web `architecture`
 * `open source software` / computers / linux / new technology
 * [pc gaming](gaming/)

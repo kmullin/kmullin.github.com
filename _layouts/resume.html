@@ -37,26 +37,6 @@
         <p>{{ page.profile }}</p>
     </section>
 
-    <section id="experience">
-        <h1>Work Experience</h1>
-        {% for job_hash in page.jobs %}
-            <article>
-                <h1>{{ job_hash.company }} <span>{{ job_hash.location }}</span></h1>
-                <h2>{{ job_hash.title }}</h2>
-                <span class="start">{{ job_hash.dates.start }}</span>
-                <span class="end">{{ job_hash.dates.end }}</span>
-                <p>{{ job_hash.description }}</p>
-                {% if job_hash.duties %}
-                    <p>
-                    {% for duty in job_hash.duties %}
-                        {{ duty }} <br/>
-                    {% endfor %}
-                    </p>
-                {% endif %}
-            </article>
-        {% endfor %}
-    </section>
-
     <section id="skills">
         <h1>Skills</h1>
         <dl>
@@ -69,6 +49,26 @@
                 {% endfor %}
             {% endfor %}
         </dl>
+    </section>
+
+    <section id="experience">
+        <h1>Work Experience</h1>
+        {% for job_hash in page.jobs %}
+            <article>
+                <h1>{{ job_hash.title }}</h1>
+                <h2>{{ job_hash.company }} - <span>{{ job_hash.location }}</span></h2>
+                <span class="start">{{ job_hash.dates.start }}</span>
+                <span class="end">{{ job_hash.dates.end }}</span>
+                <p>{{ job_hash.description }}</p>
+                {% if job_hash.duties %}
+                    <p>
+                    {% for duty in job_hash.duties %}
+                        {{ duty }} <br/>
+                    {% endfor %}
+                    </p>
+                {% endif %}
+            </article>
+        {% endfor %}
     </section>
 
   <!-- Script for enabling media queries on IE5+ -->

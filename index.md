@@ -5,8 +5,8 @@ title: /home
 {% include JB/setup %}
 
 i'm in `ops`, but also do some `dev`.
-i live in [san ramon, ca](http://g.co/maps/texm3) just outside [san francisco, ca](http://g.co/maps/un9hn).
-i work with an awesome [team](http://uservoice.com/about/team) at [uservoice](http://uservoice.com).
+
+i live in [mill valley, ca](https://goo.gl/maps/E7hHY6C3G4XDfTUWA) just north of [san francisco, ca](https://goo.gl/maps/6525rvzkE7oAr1Qf6).
 
 ------------------------
 

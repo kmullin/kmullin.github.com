@@ -1,23 +1,40 @@
-# This is the default format.
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# XXX: No idea what these are for
 permalink: /blog/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
 auto: true
 highligher: rouge
+#####
 
-# Themes are encouraged to use these universal variables
-# so be sure to set them if your theme uses them.
-#
-title : kpmullin
+title: kpmullin
 tagline: of an ops guy
-author :
-  name : Kevin Mullin
-  title: Operations Engineer
-  email : kevin@kpmullin.com
-  location: San Ramon, CA
-  github : kmullin
-  linkedin : kmullin
+author:
+  name: Kevin Mullin
+  title: Senior Site Reliability Engineer
+  email: kevin@kpmullin.com
+  location: Mill Valley, CA
+  github: kmullin
+  linkedin: kmullin
 #  twitter : username
 #  feedburner : feedname
 
@@ -125,3 +142,27 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
 
+# Build settings
+# theme: minima
+# plugins:
+#   - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

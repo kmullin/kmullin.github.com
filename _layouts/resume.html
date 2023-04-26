@@ -21,38 +21,24 @@
 <body>
 
     <header class="vcard">
-    	<h1 class="fn">{{ site.author.name }}</h1>
+        <h1 class="fn">{{ site.author.name }}</h1>
         <h2 class="role">{{ site.author.title }}</h2>
-    	<ul class="contact">
-        	<li class="email">{{ site.author.email }}</li>
+        <ul class="contact">
+            <li class="email">{{ site.author.email }}</li>
             <li class="url github"><a href="https://www.github.com/{{ site.author.github }}" title="{{ site.author.name }} Github">Github</a></li>
             <li class="url"><a href="{{ site.production_url }}" title="{{ site.author.name }} Website">{{ site.production_url }}</a></li>
             <li class="adr"><span class="locality">{{ site.author.location }}</span></li>
             <li class="url linkedin"><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" title="{{ site.author.name }} Linkedin">Linkedin</a></li>
-		</ul>
+        </ul>
     </header>
 
-	<section id="summary">
-    	<h1>Summary</h1>
+    <section id="summary">
+        <h1>Summary</h1>
         <p>{{ page.profile }}</p>
     </section>
 
-    <section id="skills">
-    	<h1>Skills</h1>
-        <dl>
-            {% for skill_hash in page.skills %}
-                {% for skill in skill_hash %}
-                    <dt>{{ skill[0] }}</dt>
-                    {% for s in skill[1] %}
-                    <dd>{{ s }}</dd>
-                    {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        </dl>
-    </section>
-
     <section id="experience">
-    	<h1>Work Experience</h1>
+        <h1>Work Experience</h1>
         {% for job_hash in page.jobs %}
             <article>
                 <h1>{{ job_hash.company }} <span>{{ job_hash.location }}</span></h1>
@@ -69,20 +55,21 @@
                 {% endif %}
             </article>
         {% endfor %}
-
     </section>
 
- <!--   <section id="hobbies">
-    	<h1>Hobbies &amp; Interests</h1>
-        <ul>
-        	<li>Playing Drums and Percussion (Caj&oacute;n) with <a href="https://www.facebook.com/DiplomatasBrasil" rel="external" title="Diplomatas on Facebook">Diplomatas</a>, an acoustic trio;</li>
-            <li><a href="http://youtweetintome.jpedroribeiro.com/" rel="external" title="You Tweetin' to Me?">Tweeting moview reviews</a>;</li>
-            <li><a href="http://ribeirobrowbrewery.tumblr.com/" rel="external" title="Ribeiro Bros Brewery">Brewing beer</a> with my brother;</li>
-            <li><a href="http://www.flickr.com/photos/jpedroribeiro/4557978857/in/photostream/" rel="external" title="My Flickr Set">Photography</a>;</li>
-            <li>Travelling;</li>
-            <li>Gaming (from Atari to PS3).</li>
-        </ul>
-    </section> -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <dl>
+            {% for skill_hash in page.skills %}
+                {% for skill in skill_hash %}
+                    <dt>{{ skill[0] }}</dt>
+                    {% for s in skill[1] %}
+                    <dd>{{ s }}</dd>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </dl>
+    </section>
 
   <!-- Script for enabling media queries on IE5+ -->
   <script src="/assets/local/js/css3-mediaqueries.js"></script>

@@ -10,6 +10,7 @@ profile:
 
 skills:
   - Programming:
+    - Golang
     - Ruby
     - Python
     - C++
@@ -20,6 +21,9 @@ skills:
     - KVM (qemu)
     - Xen
     - VMWare (ESXi, Server)
+  - Containerization:
+    - Docker
+    - Podman
   - Operating Systems:
     - Linux
     - FreeBSD
@@ -65,12 +69,26 @@ skills:
     - collectd
 
 jobs:
+  - company: Twitch
+    title: Senior Systems Development Engineer
+    location: San Francisco, CA
+    dates:
+      start: Nov 2013
+      end: Mar 2023
+    description:
+      Build, scale, and maintain operations of production SaaS product for 100,000+ customers.
+    duties:
+      - Capacity Planning
+      - Manage Remote Hardware
+      - Maintain/Support/Contribute to Production Codebase
+      - Site Reliability and Performance
+
   - company: UserVoice, Inc.
     title: Head of Operations
     location: San Francisco, CA
     dates:
       start: Apr 2011
-      end: Present
+      end: Nov 2013
     description:
       Build, scale, and maintain operations of production SaaS product for 100,000+ customers.
     duties:

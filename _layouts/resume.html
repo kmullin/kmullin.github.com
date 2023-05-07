@@ -34,21 +34,7 @@
 
     <section id="summary">
         <h1>Summary</h1>
-        <p>{{ page.profile }}</p>
-    </section>
-
-    <section id="skills">
-        <h1>Skills</h1>
-        <dl>
-            {% for skill_hash in page.skills %}
-                {% for skill in skill_hash %}
-                    <dt>{{ skill[0] }}</dt>
-                    {% for s in skill[1] %}
-                    <dd>{{ s }}</dd>
-                    {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        </dl>
+        {{ page.profile | markdownify }}
     </section>
 
     <section id="experience">
@@ -69,6 +55,20 @@
                 {% endif %}
             </article>
         {% endfor %}
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <dl>
+            {% for skill_hash in page.skills %}
+                {% for skill in skill_hash %}
+                    <dt>{{ skill[0] }}</dt>
+                    {% for s in skill[1] %}
+                    <dd>{{ s }}</dd>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </dl>
     </section>
 
   <!-- Script for enabling media queries on IE5+ -->

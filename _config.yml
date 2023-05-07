@@ -32,7 +32,9 @@ author:
   name: Kevin Mullin
   title: Senior Site Reliability Engineer
   email: kevin@kpmullin.com
-  location: Mill Valley, CA
+  location:
+    name: Mill Valley, CA
+    map_link: https://goo.gl/maps/E7hHY6C3G4XDfTUWA
   github: kmullin
   linkedin: kmullin
 #  twitter : username

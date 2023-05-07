@@ -6,7 +6,7 @@ title: /home
 
 i'm in `ops`, but also do some `dev`.
 
-i live in [mill valley, ca](https://goo.gl/maps/E7hHY6C3G4XDfTUWA) just north of [san francisco, ca](https://goo.gl/maps/6525rvzkE7oAr1Qf6).
+i live in [{{ site.author.location.name | downcase }}]({{ site.author.location.map_link }}) just north of [san francisco, ca](https://goo.gl/maps/6525rvzkE7oAr1Qf6).
 
 ------------------------
 

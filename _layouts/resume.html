@@ -45,13 +45,13 @@
                 <h2>{{ job_hash.company }} - <span>{{ job_hash.location }}</span></h2>
                 <span class="start">{{ job_hash.dates.start }}</span>
                 <span class="end">{{ job_hash.dates.end }}</span>
-                <p>{{ job_hash.description }}</p>
+                <p>{{ job_hash.description | newline_to_br }}</p>
                 {% if job_hash.duties %}
-                    <p>
+                    <ul>
                     {% for duty in job_hash.duties %}
-                        {{ duty }} <br/>
+                        <li>{{ duty }}</li>
                     {% endfor %}
-                    </p>
+                    </ul>
                 {% endif %}
             </article>
         {% endfor %}

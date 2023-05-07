@@ -71,6 +71,17 @@
         </dl>
     </section>
 
+    {% if page.hobbies %}
+    <section id="hobbies">
+      <h1>Hobbies &amp; Interests</h1>
+       <ul>
+            {% for hobby in page.hobbies %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+       </ul>
+    </section>
+    {% endif %}
+
   <!-- Script for enabling media queries on IE5+ -->
   <script src="/assets/local/js/css3-mediaqueries.js"></script>
 
